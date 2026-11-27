@@ -17,6 +17,11 @@ public class StudentController {
 	@Autowired 
 	private StudentDao sd;
 	
+	@GetMapping("/")
+	public String home() {
+	    return "redirect:/student/index";
+	}
+	
 	@GetMapping("/student/register")
 	public String registerPage() {
 		return "register";
